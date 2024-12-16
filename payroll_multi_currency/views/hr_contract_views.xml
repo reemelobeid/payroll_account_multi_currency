@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit.</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <field name="structure_type_id" position="after">
+                <field name="currency_id" force_save="True" required="True"
+                       options="{'no_create': True, 'no_edit': True}"/>
+            </field>
+        </field>
+    </record>
+</odoo>
